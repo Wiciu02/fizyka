@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang = "pl">
+<head>
+	<title>Wakacje-5</title>
+	<meta charset = "utf-8" />
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+	<link rel = "stylesheet" href = "Wakacje.css" type = "text/css" />
+	<script src = "Wakacje.js" type = "text/javascript"></script>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+</head>
+<body onload = "ChangePhoto()">
+	<div style = "position: relative">
+		<b><div id = "photos"></div></b>
+		<div style = "position: absolute; top: 3%; right: 4%" id = "miasta"></div>
+		<div style = "position: absolute; top: 0%; left: 0%" id = "previous" onclick = "PreviousPhoto()"><span class = "arrow"> &lt </span></div>
+		<div style = "position: absolute; top: 0%; right: 0%" id = "next" onclick = "NextPhoto()"><span class = "arrow"> &gt </span></div>
+		<div style = "position: absolute; bottom: 3%; left: 5%" id = "napis"><h1 style = "color: #fff;"><u><i>Demografia</i></u></h1></div>
+	</div>
+	<br /><br />
+	<div class = "menu">
+		<br /><h2 style = "line-height: 4px; font-size: 30px">Spis treści</h2><hr  />
+		<ul style = "list-style-type: disc; list-style-position: inside; text-align: left">
+			<a href = "Wakacje.html"><li>Strona główna</li></a>
+			<a href = "HistoriaH.html"><li>Historia</li>
+			<a href = "GeografiaH.html"><li>Geografia</li>
+			<a href = "UstrojH.html"><li>Ustrój polityczny</li>
+			<a href = "ReligieH.html"><li>Religia</li>
+			<a href = "DemografiaH.html"><li>Demografia</li>
+			<a href = "KulturaH.html"><li>Kultura</li>
+		</ul>
+		<a href = "https://pl.wikipedia.org/wiki/Hiszpania"><img src = "http://www.panstwa.com/flagi/600-webp/hiszpania.webp" alt = "Flaga" width = "97%" style = "border-radius: 12px;"/></a><br /><br />
+		<a href = "https://pl.wikipedia.org/wiki/Demografia_Hiszpanii"><img src="https://mm.pwn.pl/ency/jpg/583/1l/d88i4372.jpg" alt = "Kordowa" width = "97%" /></a><span class = "podpis"><i>Kordowa</i></span><br /><br />
+		<a href = "https://pl.wikipedia.org/wiki/Toledo_(Hiszpania)"><img src = "https://img.itinari.com/pages/images/original/91049234-cdfd-46ec-b712-ae9d58ddb728-istock-464975554.jpg?ch=DPR&dpr=1&w=1600&s=e34b6d2a1b2f192635d0eefec57d07f8" alt = "Toledo" width = "97%" /></a><span class = "podpis"><i>Toledo</i></span><br /><br />
+		<a href = "https://pl.wikipedia.org/wiki/Burgos"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Catedral_de_Burgos_II.jpg" alt = "Burgos" width = "97%" /></a><span class = "podpis"><i>Burgos</i></span><br /><br />
+	</div>
+	<div class = "text" style = "font-size: 19px;">
+		<h3>Dane ogólne</h3>
+		<p>Hiszpania liczyła 40 499 799 mieszkańców 1 stycznia 2000, zaś 1 stycznia 2009 już 46 661 950. Gęstość zaludnienia wynosi 91,4 os./km², jest niższa niż w większości krajów Europy Zachodniej, a jej rozmieszczenie na terytorium kraju jest nierównomierne. Obszary najgęściej zaludnione znajdują się na wybrzeżu i wokół Obszaru Metropolitarnego Madrytu, podczas gdy reszta interioru jest słabo zaludniona. Gęstość zaludnienia jest różna w zależności od prowincji. Największa gęstość zaludnienia występuje w granicach wielkich miast.</p>
+		<h3>Imigracja</h3>
+		<p>Hiszpania, podobnie jak prawie wszystkie kraje Europy borykałaby się z ujemnym przyrostem naturalnym, gdyby nie imigranci, których przyciąga dynamicznie rozwijająca się gospodarka tego kraju. Rocznie przybywają ich tysiące – głównie z Afryki i dawnych hiszpańskich kolonii. W 2009 r., 12% mieszkańców (5,6 mln) było obcokrajowcami. Największymi mniejszościami są: Rumuni (797 tys.), Marokańczycy (710 tys.), Ekwadorczycy (500 tys.), Kolumbijczycy (400 tys.), Boliwijczycy (ok. 400 tys.) i Brytyjczycy (374,6 tys. – 761 tys.) oraz ludność z pozostałych krajów afrykańskich, a nawet z krajów dalekiej Azji (200 tys.), w tym Chińczycy (125 tys.). Często próby przedostania się biednych ludzi z Afryki kończą się tragedią – toną w Morzu Śródziemnym lub Oceanie Atlantyckim. W Hiszpanii widoczna jest tendencja przybywania tu i osiedlania się ludności z krajów UE i z całej Europy, wśród nich są m.in. Brytyjczycy (350 tys.), Francuzi (225 tys.), Niemcy (215 tys.), Portugalczycy (160 tys.), Włosi (158 tys.), Polacy (140 tys.), Turcy (105 tys.), Ukraińcy (100 tys.), Szwedzi (60 tys.).</p>
+		<h3>Miasta</h3>
+		<p>Z wyjątkiem Madrytu, Sewilli i Saragossy, największe aglomeracje miejskie występują wzdłuż wybrzeża Morza Śródziemnego i Atlantyku. Wśród najludniejszych miast i aglomeracji Hiszpanii należy wymienić:</p><br />
+		<div id = "tabela"><table>
+		<thead>
+			<tr>
+				<th>#</th><th>Miasto</th><th>Liczba ludności</th><th>Powierzchnia</th><th>Gęstość zaludnienia</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td scope="row"></td><th><a href = "https://pl.wikipedia.org/wiki/Madryt">Madryt</a></th><td>3 266 126</td><td>604,45 km<sup>2</sup></td><td>5265,91 os./km<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td scope="row"></td><th><a href = "https://pl.wikipedia.org/wiki/Barcelona">Barcelona</a></th><td>1 620 809</td><td>101,4 km<sup>2</sup></td><td>15 992 os./km<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td scope="row"></td><th> <a href = "https://pl.wikipedia.org/wiki/Walencja">Walencja</a></th><td>801 545</td><td>134,65 km<sup>2</sup></td><td>5853 os./km<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td scope="row"></td><th> <a href = "https://pl.wikipedia.org/wiki/Sewilla">Sewilla</a></th><td>693 878</td><td>141,31 km<sup>2</sup></td><td>4910 os./km<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td scope="row"></td><th><a href = "https://pl.wikipedia.org/wiki/Saragossa">Saragossa</a></th><td>661 108</td><td>973,78 km<sup>2</sup></td><td>679 os./km<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td scope="row"></td><th><a href = "https://pl.wikipedia.org/wiki/Malaga">Malaga</a></th><td>572 947</td><td>398,25 km<sup>2</sup></td><td>1439 os./km<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td scope="row"></td><th><a href = "https://pl.wikipedia.org/wiki/Murcja_(miasto)">Murcja</a></th><td>438 246</td><td>881,86 km<sup>2</sup></td><td>497 os./km<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td scope="row"></td><th><a href = "https://pl.wikipedia.org/wiki/Palma_(Hiszpania)">Palma de Mallorca</a></th><td>400 578</td><td>213,55 km<sup>2</sup></td><td>1876 os./km<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td scope="row"></td><th><a href = "https://pl.wikipedia.org/wiki/Las_Palmas_de_Gran_Canaria">Las Palmas de Gran Canaria</a></th><td>379 766</td><td>100,55 km<sup>2</sup></td><td>3777 os./km<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td scope="row"></td><th><a href = "https://pl.wikipedia.org/wiki/Bilbao">Bilbao</a></th><td>345 122</td><td>41,5 km<sup>2</sup></td><td>8316 os./km<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td scope="row"></td><th><a href = "https://pl.wikipedia.org/wiki/Alicante">Alicante</a></th><td>328 648</td><td>201,27<sup>2</sup></td><td>1633 os./km<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td scope="row"></td><th><a href = "https://pl.wikipedia.org/wiki/Kordoba">Kordoba</a></th><td>325 701</td><td>1254,91 km<sup>2</sup></td><td>259,54 os./km<sup>2</sup></td>
+			</tr>
+		</tbody>
+		</table></div><br />
+		<h3>Osadnictwo</h3>
+		<p>Osiedla wiejskie odznaczają się w Hiszpanii bardzo dużą różnorodnością; w zależności od okolicy zmienia się materiał, z którego zbudowane są domy, a także ich wielkość i układ przestrzenny. Z jednej strony występuje więc osadnictwo całkowicie rozproszone, a z drugiej – skupione, w którym nierzadkie są przykłady wsi liczących powyżej 2 tys. domów (np. tzw. pueblos blancos). Rozmieszczenie i typy wsi zależą przede wszystkim od warunków przyrodniczych. Możliwość zaopatrzenia w wodę decyduje jednoznacznie o lokalizacji wsi, których większość leży w dolinach rzek. Niekiedy wpływ mają tu także czynniki przyrodnicze, historyczne oraz ekonomiczne. Formy osiedli pochodzą z różnorodnych okresów, a centralnie położonymi ośrodkami są stolice prowincji.</p><br />
+	</div>
+	<div id = "info">Copyright &copy Państwa świata - Hiszpania, created and coded by <a style = "color: rgb(194, 207, 72)" href = "mailto: 19JZebski@kopernik.kalisz.pl">Jakub Zębski</a> using information from <a style = "color: rgb(194, 207, 72)" href = "https://pl.wikipedia.org/wiki/Hiszpania">Wikipedia</a></div>
+</body>
+</html>
